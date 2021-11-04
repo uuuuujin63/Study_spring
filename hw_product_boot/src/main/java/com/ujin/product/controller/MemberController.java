@@ -1,4 +1,4 @@
-package com.ujin.test.controller;
+package com.ujin.product.controller;
 
 import java.util.Map;
 
@@ -14,9 +14,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-
-import com.ujin.test.model.MemberDto;
-import com.ujin.test.model.service.MemberService;
+import com.ujin.product.model.MemberDto;
+import com.ujin.product.model.service.MemberService;
 
 @Controller
 @RequestMapping("/user")
@@ -26,14 +25,11 @@ public class MemberController {
 	@Autowired
 	private MemberService memberService;
 	
-	
-	// 단순 이동 - join 페이지로 이동함
 	@GetMapping("/join")
 	public String join() {
 		return "user/join";
 	}
 	
-	// 가입 폼에 입력한 정보들을 memberDto에 담아 insert 해준다.
 	@PostMapping("/join")
 	public String join(MemberDto memberDto) throws Exception {
 		memberService.registerMember(memberDto);

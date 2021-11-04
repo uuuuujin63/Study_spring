@@ -1,4 +1,4 @@
-package com.ujin.test.controller;
+package com.ujin.product.controller;
 
 
 
@@ -11,9 +11,9 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.servlet.NoHandlerFoundException;
 
-@ControllerAdvice
+//@ControllerAdvice
 public class ExceptionController {
-	// 오류가 나면 error 페이지로 이동을 시켜준다.
+
 	private Logger logger = LoggerFactory.getLogger(ExceptionController.class);
 	
 	@ExceptionHandler(Exception.class)
